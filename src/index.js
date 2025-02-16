@@ -60,15 +60,17 @@ class OpenAnalytics {
             data.userId = this.userId;
         }
 
-        if (navigator.sendBeacon) {
-            navigator.sendBeacon(this.apiEndpoint, JSON.stringify(data))
-        } else {
-            fetch(this.apiEndpoint, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            }).catch(err => console.error("Data send error:", err));
-        }
+        console.log("Sending Data:", JSON.stringify(data))
+
+        // if (navigator.sendBeacon) {
+        //     navigator.sendBeacon(this.apiEndpoint, JSON.stringify(data))
+        // } else {
+        //     fetch(this.apiEndpoint, {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/json" },
+        //         body: JSON.stringify(data)
+        //     }).catch(err => console.error("Data send error:", err));
+        // }
     }
 }
 
