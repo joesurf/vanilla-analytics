@@ -1,0 +1,31 @@
+{
+  "name": "openanalytics-js",
+  "version": "1.0.0",
+  "description": "A lightweight vanilla JS analytics SDK",
+  "main": "dist/openanalytics.min.js",
+  "module": "dist/openanalytics.min.js",
+  "types": "dist/openanalytics.d.ts",
+  "scripts": {
+    "build": "webpack --mode production",
+    "test": "jest",
+    "lint": "eslint src",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joesurf/vanilla-analytics.git"
+  },
+  "keywords": ["analytics", "tracking", "javascript", "sdk"],
+  "author": "Joesurf",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^9.0.0"
+  }
+}
